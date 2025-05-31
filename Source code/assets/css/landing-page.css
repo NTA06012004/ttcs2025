@@ -219,17 +219,7 @@ body.gc-landing-page,
     border: 1px solid var(--gc-border-color);
     border-radius: 0.75rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* height: 100% đã có từ Bootstrap .h-100 */
-
-    /* THÊM HOẶC SỬA ĐỔI BOX-SHADOW Ở ĐÂY */
-    /* Tùy chọn 1: Một bóng đổ rõ hơn Bootstrap's shadow-sm */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075); 
-
-    /* Tùy chọn 2: Một bóng đổ lớn hơn, mềm hơn */
-    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
-
-    /* Tùy chọn 3: Bóng đổ có màu (ít phổ biến cho card thông thường) */
-    /* box-shadow: 0 5px 15px rgba(var(--gc-primary-rgb), 0.2); */ /* Ví dụ bóng màu xanh primary */
 }
 
 .feature-card:hover {
