@@ -75,42 +75,6 @@ function sendPasswordResetEmail($recipient_email, $recipient_name, $reset_link) 
     // Đây là phần MÔ PHỎNG, bạn cần tích hợp PHPMailer thực sự ở đây
     error_log("Password Reset Email to: $recipient_email, Link: $reset_link");
     return true; // Giả định gửi thành công cho mục đích demo
-    
-    /* -------- VÍ DỤ DÙNG PHPMAILER (cần cài đặt và cấu hình) --------
-    require_once 'path/to/PHPMailer/src/Exception.php';
-    require_once 'path/to/PHPMailer/src/PHPMailer.php';
-    require_once 'path/to/PHPMailer/src/SMTP.php';
-
-    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
-    try {
-        //Server settings
-        // $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.example.com'; // Đặt SMTP server của bạn
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'user@example.com'; // SMTP username
-        $mail->Password   = 'secret';           // SMTP password
-        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS; // Hoặc SMTPS
-        $mail->Port       = 587; // Hoặc 465
-        $mail->CharSet    = 'UTF-8';
-
-        //Recipients
-        $mail->setFrom('no-reply@yourdomain.com', 'EduPlatform');
-        $mail->addAddress($recipient_email, $recipient_name);
-
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body    = $body;
-        $mail->AltBody = strip_tags($body);
-
-        $mail->send();
-        return true;
-    } catch (Exception $e) {
-        error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
-        return false;
-    }
-    */
 }
 ?>
 <link rel="stylesheet" href="assets/css/auth-pages.css"> {/* Tạo file CSS riêng nếu cần */}
