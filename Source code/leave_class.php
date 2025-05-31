@@ -47,17 +47,6 @@ $stmt_class_name->close();
 // Bắt đầu transaction
 $conn->begin_transaction();
 try {
-    // 1. (Tùy chọn) Xóa các bài nộp của học sinh này trong lớp đó
-    // Nếu không xóa, bài nộp vẫn còn nhưng học sinh không còn trong lớp.
-    // Nếu muốn xóa:
-    // $stmt_delete_my_submissions = $conn->prepare("
-    // DELETE s FROM submissions s
-    // JOIN assignments a ON s.assignment_id = a.id
-    // WHERE a.class_id = ? AND s.student_id = ?
-    // ");
-    // $stmt_delete_my_submissions->bind_param("ii", $class_id_to_leave, $current_user_id);
-    // $stmt_delete_my_submissions->execute();
-    // $stmt_delete_my_submissions->close();
 
     // 2. Xóa bản ghi ghi danh (enrollment) của người dùng này khỏi lớp
     $stmt_leave = $conn->prepare("DELETE FROM enrollments WHERE class_id = ? AND user_id = ?");
