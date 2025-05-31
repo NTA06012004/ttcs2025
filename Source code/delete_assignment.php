@@ -43,9 +43,6 @@ if ($assignment_data['teacher_id'] != $current_user_id) {
     redirect('class_view.php?id=' . $class_id_redirect . '&tab=assignments');
 }
 
-// (Tùy chọn) Xác thực CSRF Token nếu dùng GET (không khuyến khích cho delete) hoặc chuyển sang POST
-// if (!isset($_GET['csrf_token']) || !verify_csrf_token($_GET['csrf_token'])) { ... }
-
 $assignment_title_deleted = $assignment_data['title'];
 
 // Bắt đầu transaction
