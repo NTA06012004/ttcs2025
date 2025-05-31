@@ -1,6 +1,5 @@
 <?php
 require_once 'includes/header.php';
-// Không cần kiểm tra vai trò cụ thể ở đây nữa, ai cũng có thể tạo lớp
 if (!isLoggedIn()) {
     $_SESSION['message'] = "Bạn cần đăng nhập để tạo lớp học.";
     $_SESSION['message_type'] = "warning";
