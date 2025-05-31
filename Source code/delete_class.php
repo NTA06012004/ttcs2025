@@ -24,14 +24,6 @@ if (!isTeacherOfClass($conn, $current_user_id, $class_id_to_delete)) {
     redirect('dashboard.php'); // Hoặc về class_view.php của lớp đó
 }
 
-// (Tùy chọn) Thêm kiểm tra CSRF token nếu bạn đã triển khai
-// if (!isset($_POST['csrf_token']) || !verify_csrf_token($_POST['csrf_token'])) {
-//     $_SESSION['message'] = "Yêu cầu không hợp lệ (CSRF token).";
-//     $_SESSION['message_type'] = "danger";
-//     redirect('class_view.php?id=' . $class_id_to_delete);
-// }
-
-
 // Lấy tên lớp để hiển thị trong thông báo
 $stmt_class_name = $conn->prepare("SELECT class_name FROM classes WHERE id = ?");
 $stmt_class_name->bind_param("i", $class_id_to_delete);
