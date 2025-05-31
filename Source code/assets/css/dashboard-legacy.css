@@ -1,9 +1,4 @@
 /* assets/css/dashboard-legacy.css */
-/* Styles for the legacy dashboard.php with separate Teacher/Student roles */
-
-/* Biến màu (đảm bảo các biến --gc-... đã được định nghĩa trong style.css chung) */
-
-/* User Profile Sidebar (Cột thông tin người dùng bên trái) */
 .user-profile-sidebar-legacy .card {
     border: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
