@@ -1,0 +1,57 @@
+/* assets/css/todo-page.css */
+
+.dashboard-section-title-legacy .badge { /* Style cho badge đếm số lượng task */
+    font-size: 0.8em;
+    padding: 0.3em 0.6em;
+    vertical-align: middle;
+}
+
+.todo-list-group .list-group-item {
+    padding: 0.9rem 1.25rem;
+    border-color: var(--gc-border-color); /* Sử dụng biến màu chung */
+    transition: background-color 0.15s ease, border-left-color 0.2s ease;
+    border-left: 4px solid transparent;
+}
+
+.todo-list-group .list-group-item:hover {
+    background-color: #f8f9fa; /* Hoặc var(--gc-hover-bg) */
+    border-left-color: var(--gc-primary);
+}
+
+.todo-list-group .task-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gc-text-primary);
+}
+
+.todo-list-group .task-due-date {
+    font-size: 0.85rem;
+}
+.todo-list-group .task-due-date .bi {
+    vertical-align: text-bottom;
+}
+
+/* Style cho các section khác nhau nếu muốn */
+h4[class*="text-danger"] + .todo-list-group .list-group-item {
+    border-left-color: var(--bs-danger); /* Sử dụng biến Bootstrap */
+}
+h4[class*="text-danger"] + .todo-list-group .list-group-item:hover {
+    border-left-color: var(--bs-danger); /* Giữ màu khi hover */
+    background-color: rgba(var(--bs-danger-rgb), 0.05); /* Nền đỏ nhạt khi hover */
+}
+
+h4[class*="text-warning"] + .todo-list-group .list-group-item {
+    border-left-color: var(--bs-warning);
+}
+h4[class*="text-warning"] + .todo-list-group .list-group-item:hover {
+    border-left-color: var(--bs-warning);
+    background-color: rgba(var(--bs-warning-rgb), 0.08);
+}
+
+h4[class*="text-info"] + .todo-list-group .list-group-item {
+    border-left-color: var(--bs-info);
+}
+h4[class*="text-info"] + .todo-list-group .list-group-item:hover {
+    border-left-color: var(--bs-info);
+    background-color: rgba(var(--bs-info-rgb), 0.07);
+}
