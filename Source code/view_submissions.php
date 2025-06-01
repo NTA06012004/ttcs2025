@@ -220,7 +220,6 @@ $total_students_for_assignment = $count_submitted + $count_not_submitted; // T·ª
             <div class="accordion-item" id="accordion-item-<?php echo $accordion_id_s; ?>">
                 <h2 class="accordion-header" id="heading-<?php echo $accordion_id_s; ?>">
                     <button class="accordion-button <?php echo !$is_expanded_s ? 'collapsed' : ''; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $accordion_id_s; ?>" aria-expanded="<?php echo $is_expanded_s ? 'true' : 'false'; ?>" aria-controls="collapse-<?php echo $accordion_id_s; ?>">
-                        <img src="uploads/profile_pictures/<?php echo htmlspecialchars($sub_data['profile_picture'] ?: 'default.png'); ?>" alt="<?php echo htmlspecialchars($sub_data['full_name']); ?>" class="profile-picture-nav me-2">
                         <span class="fw-medium"><?php echo htmlspecialchars($sub_data['full_name']); ?></span>
                         <?php echo $submission_time_status; ?>
                         <span class="ms-auto">
@@ -257,7 +256,6 @@ $total_students_for_assignment = $count_submitted + $count_not_submitted; // T·ª
         <div class="list-group list-group-flush">
             <?php foreach($not_submitted_students_data as $student_ns): ?>
             <div class="list-group-item d-flex align-items-center p-3">
-                <img src="uploads/profile_pictures/<?php echo htmlspecialchars($student_ns['profile_picture'] ?: 'default.png'); ?>" alt="<?php echo htmlspecialchars($student_ns['full_name']); ?>" class="profile-picture-nav me-2">
                 <span class="fw-medium"><?php echo htmlspecialchars($student_ns['full_name']); ?></span>
                 <small class="text-muted ms-2">(<?php echo htmlspecialchars($student_ns['email']); ?>)</small>
                 <span class="ms-auto badge bg-secondary">Ch∆∞a n·ªôp</span>
