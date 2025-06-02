@@ -10,7 +10,8 @@ CREATE TABLE users (
     email_verified_at DATETIME NULL,
     password_reset_token VARCHAR(64) NULL, -- Token thường là chuỗi hex
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Tự động cập nhật khi bản ghi thay đổi
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Tự động cập nhật khi bản ghi thay đổi
+    password_reset_expires DATETIME NULL DEFAULT NULL
 );
 
 CREATE TABLE classes (
